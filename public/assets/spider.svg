@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454 520" width="454" height="520">
+  <defs>
+    <radialGradient id="spiderFieldGrad" cx="50%" cy="44%" r="55%">
+      <stop offset="0%" stop-color="#162a16"/>
+      <stop offset="55%" stop-color="#101e10"/>
+      <stop offset="100%" stop-color="#080f08"/>
+    </radialGradient>
+  </defs>
+  <!-- Outer boundary -->
+  <ellipse cx="227" cy="255" rx="218" ry="258" fill="url(#spiderFieldGrad)" stroke="#1e4d1e" stroke-width="2"/>
+  <!-- Concentric circles -->
+  <ellipse cx="227" cy="255" rx="175" ry="200" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <ellipse cx="227" cy="255" rx="135" ry="155" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <ellipse cx="227" cy="255" rx="95" ry="108" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <ellipse cx="227" cy="255" rx="55" ry="62" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <!-- Spider lines from center -->
+  <line x1="227" y1="227" x2="227" y2="47" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="354" y2="100" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="407" y2="227" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="354" y2="354" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="227" y2="407" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="100" y2="354" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="47" y2="227" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="100" y2="100" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <!-- Pitch -->
+  <rect x="212" y="185" width="30" height="140" rx="3" fill="#5a4a35" opacity="0.6" stroke="#6b5a42" stroke-width="1"/>
+  <!-- Center -->
+  <circle cx="227" cy="227" r="5" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="227" cy="227" r="2" fill="rgba(255,255,255,0.6)"/>
+</svg>

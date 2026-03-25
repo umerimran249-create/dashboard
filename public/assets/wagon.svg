@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454 520" width="454" height="520">
+  <defs>
+    <radialGradient id="fieldGrad" cx="50%" cy="44%" r="55%">
+      <stop offset="0%" stop-color="#1a4a1a"/>
+      <stop offset="60%" stop-color="#143d14"/>
+      <stop offset="100%" stop-color="#0d2b0d"/>
+    </radialGradient>
+    <radialGradient id="innerFieldGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e5a1e"/>
+      <stop offset="100%" stop-color="#163c16"/>
+    </radialGradient>
+  </defs>
+  <!-- Outer boundary -->
+  <ellipse cx="227" cy="255" rx="218" ry="258" fill="url(#fieldGrad)" stroke="#2d7a2d" stroke-width="3"/>
+  <!-- 30-yard circle -->
+  <ellipse cx="227" cy="255" rx="145" ry="165" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- Inner circle -->
+  <ellipse cx="227" cy="255" rx="80" ry="85" fill="url(#innerFieldGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <!-- Pitch -->
+  <rect x="212" y="185" width="30" height="140" rx="4" fill="#8B7355" stroke="#a08060" stroke-width="1"/>
+  <rect x="212" y="185" width="30" height="4" fill="#c8b08a"/>
+  <rect x="212" y="321" width="30" height="4" fill="#c8b08a"/>
+  <!-- Crease lines -->
+  <line x1="208" y1="210" x2="246" y2="210" stroke="#fff" stroke-width="1.5" opacity="0.8"/>
+  <line x1="208" y1="300" x2="246" y2="300" stroke="#fff" stroke-width="1.5" opacity="0.8"/>
+  <!-- Stumps top -->
+  <line x1="222" y1="185" x2="222" y2="177" stroke="#e8c87a" stroke-width="2"/>
+  <line x1="227" y1="185" x2="227" y2="177" stroke="#e8c87a" stroke-width="2"/>
+  <line x1="232" y1="185" x2="232" y2="177" stroke="#e8c87a" stroke-width="2"/>
+  <!-- Stumps bottom -->
+  <line x1="222" y1="325" x2="222" y2="333" stroke="#e8c87a" stroke-width="2"/>
+  <line x1="227" y1="325" x2="227" y2="333" stroke="#e8c87a" stroke-width="2"/>
+  <line x1="232" y1="325" x2="232" y2="333" stroke="#e8c87a" stroke-width="2"/>
+  <!-- Sector lines from center (227, 227) at 45° intervals -->
+  <line x1="227" y1="227" x2="227" y2="47" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="354" y2="100" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="407" y2="227" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="354" y2="354" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="227" y2="407" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="100" y2="354" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="47" y2="227" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+  <line x1="227" y1="227" x2="100" y2="100" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+  <!-- Center dot -->
+  <circle cx="227" cy="227" r="4" fill="rgba(255,255,255,0.5)"/>
+</svg>
