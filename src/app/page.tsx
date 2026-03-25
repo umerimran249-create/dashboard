@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import type { PlayerIndex, TeamStats } from "@/lib/types";
-import { Users, TrendingUp, Trophy, Zap, ChevronRight, Shield } from "lucide-react";
+import { Users, TrendingUp, Trophy, Zap, ChevronRight, Shield, Target } from "lucide-react";
 
 function getDataDir() {
   return path.join(process.cwd(), "public", "data");
@@ -91,6 +91,10 @@ export default function HomePage() {
             <Link href="/unorthodox" className="px-3 py-1.5 text-sm font-semibold text-amber-400 rounded-lg hover:bg-amber-500/10 transition-colors">
               Unorthodox
             </Link>
+            <Link href="/ball-analysis" className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-semibold text-cyan-300 rounded-lg hover:bg-cyan-500/10 transition-colors">
+              <Target size={14} />
+              Ball Analysis
+            </Link>
           </nav>
         </div>
       </header>
@@ -138,6 +142,41 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Quick Access: Analytics Pages */}
+        <section>
+          <div className="flex items-center gap-2 mb-4">
+            <TrendingUp size={18} className="text-violet-400" />
+            <h2 className="text-lg font-black text-white uppercase tracking-wider">Analytics</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link
+              href="/unorthodox"
+              className="group rounded-2xl border border-amber-700/40 bg-gradient-to-br from-amber-600/10 to-amber-900/10 p-5 hover:scale-[1.02] transition-all duration-200 hover:shadow-lg"
+            >
+              <div className="text-[10px] font-black uppercase tracking-widest mb-1 text-amber-400">Batting</div>
+              <div className="font-black text-white text-base leading-tight mb-2">Unorthodox Shots</div>
+              <p className="text-[12px] text-slate-400 mb-3">Slog, scoop, reverse sweep, switch hit and more — leaderboards & breakdowns.</p>
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] text-slate-500">9 shot types</span>
+                <ChevronRight size={12} className="text-amber-400 group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </Link>
+
+            <Link
+              href="/ball-analysis"
+              className="group rounded-2xl border border-cyan-700/40 bg-gradient-to-br from-cyan-600/10 to-cyan-900/10 p-5 hover:scale-[1.02] transition-all duration-200 hover:shadow-lg"
+            >
+              <div className="text-[10px] font-black uppercase tracking-widest mb-1 text-cyan-400">Batting · Heatmaps</div>
+              <div className="font-black text-white text-base leading-tight mb-2">Ball-by-Ball Boundary Analysis</div>
+              <p className="text-[12px] text-slate-400 mb-3">Boundary % at Ball 1–6 in winning matches + pace/spin shot heatmaps.</p>
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] text-slate-500">Win match filter · Heatmap color-coded</span>
+                <ChevronRight size={12} className="text-cyan-400 group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </Link>
+          </div>
+        </section>
+
         {/* Teams Grid */}
         <section>
           <div className="flex items-center gap-2 mb-5">
@@ -155,7 +194,7 @@ export default function HomePage() {
               return (
                 <Link
                   key={team}
-                  href={`/team/${encodeURIComponent(team)}`}
+                  href={`/team/${team}`}
                   className={`group rounded-2xl border bg-gradient-to-br ${colorClass} p-4 hover:scale-[1.02] transition-all duration-200 hover:shadow-lg`}
                 >
                   <div className={`text-[10px] font-black uppercase tracking-widest mb-1 ${accentClass}`}>

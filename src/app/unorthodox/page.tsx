@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import type { UnorthodoxData } from "@/lib/types";
-import { ArrowLeft, FlameKindling, Zap, TrendingUp, Star } from "lucide-react";
+import { ArrowLeft, FlameKindling, Zap, TrendingUp, Star, Target } from "lucide-react";
 import UnorthodoxGlobalView from "@/components/UnorthodoxGlobalView";
 
 function getDataDir() { return path.join(process.cwd(), "public", "data"); }
@@ -66,14 +66,29 @@ export default function UnorthodoxPage() {
     <div className="min-h-screen bg-[#050811]">
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-slate-800/60 bg-[#050811]/95 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-1.5 text-slate-400 hover:text-white transition-colors">
-            <ArrowLeft size={16} />
-            <span className="text-sm font-semibold hidden sm:inline">Dashboard</span>
-          </Link>
-          <div className="h-4 w-px bg-slate-700" />
-          <FlameKindling size={16} className="text-amber-400" />
-          <span className="text-sm font-black text-white">Unorthodox Shots Analytics</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-violet-600 flex items-center justify-center">
+              <FlameKindling size={16} className="text-white" />
+            </div>
+            <div>
+              <span className="font-black text-white text-lg tracking-tight">Talking Bat</span>
+              <span className="text-slate-500 text-xs ml-2 hidden sm:inline">Cricket Analytics</span>
+            </div>
+          </div>
+          <nav className="flex items-center gap-1">
+            <Link href="/" className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-semibold text-slate-400 rounded-lg hover:bg-slate-800 transition-colors">
+              <ArrowLeft size={14} />
+              Home
+            </Link>
+            <Link href="/unorthodox" className="px-3 py-1.5 text-sm font-semibold text-amber-400 rounded-lg bg-amber-500/10">
+              Unorthodox
+            </Link>
+            <Link href="/ball-analysis" className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-semibold text-cyan-300 rounded-lg hover:bg-cyan-500/10 transition-colors">
+              <Target size={14} />
+              Ball Analysis
+            </Link>
+          </nav>
         </div>
       </header>
 

@@ -169,3 +169,65 @@ export type UnorthodoxData = {
   global: Record<string, UnorthodoxShotEntry>;
   players: UnorthodoxPlayerTotal[];
 };
+
+// ── Ball Boundary Analysis ─────────────────────────────────────────────────
+
+export type BallCell = {
+  balls: number;
+  runs: number;
+  wickets: number;
+  fours: number;
+  sixes: number;
+  boundaries: number;
+  dots: number;
+  sr: number;
+  avg: number | null;
+  dot_pct: number;
+  bnd_pct: number;
+} | null;
+
+export type BallPlayerRow = {
+  name: string;
+  team: string;
+  batting_style: string;
+  win: Record<string, BallCell>;
+  all: Record<string, BallCell>;
+  best_ball_win: string | null;
+  best_bnd_win: number | null;
+  total_win_balls: number;
+  total_win_bdry: number;
+};
+
+export type HeatmapShotCell = {
+  balls: number;
+  runs: number;
+  wickets: number;
+  boundaries: number;
+  dots: number;
+  sr: number;
+  avg: number | null;
+  dot_pct: number;
+  bnd_pct: number;
+  score: number;
+  color: "strong" | "normal" | "weak";
+} | null;
+
+export type HeatmapRow = {
+  name: string;
+  team: string;
+  cells: Record<string, HeatmapShotCell>;
+};
+
+export type BallBoundaryData = {
+  global: Record<string, { win: BallCell; all: BallCell }>;
+  best_global_ball: string;
+  best_global_bnd: number;
+  ball_labels: string[];
+  players: BallPlayerRow[];
+  heatmap: {
+    pace_shots: string[];
+    spin_shots: string[];
+    pace: HeatmapRow[];
+    spin: HeatmapRow[];
+  };
+};
